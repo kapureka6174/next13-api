@@ -24,7 +24,8 @@
     "@commitlint/config-conventional": "^17.4.4",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
-    "husky": "^8.0.3"
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0"
   },
   "commitlint": {
     "extends": [
@@ -35,5 +36,10 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
   }
 }
